@@ -1,16 +1,39 @@
-# the_chronicle
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=6085b5&height=120&section=header" alt="header"/>
 
-A new Flutter project.
+# 🗞️ The Chronicle – Flutter News App
 
-## Getting Started
+A modern, scalable **Flutter News Application** powered by **NewsAPI**, built with clean architecture, strong state management, and a premium reading experience.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Core Features
+- 🚀 **Splash Screen** with custom branding
+- 🏠 **Home Screen**
+  - Top Headlines
+  - Latest News Feed
+- 🧭 **Category-wise News**
+- 📰 **News Detail Screen**
+- 🌐 **Direct browser navigation** for original news URLs
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Bonus Features
+- 📄 **Pagination** for large news lists
+- ⚙️ **GetX State Management**
+- ⚠️ Robust API error handling
+
+---
+
+## 🧠 Tech Stack
+
+- **Flutter (Dart)**
+- **NewsAPI**
+- **GetX** – State management & navigation
+- **Dio** – Network requests
+- **Clean Architecture**
+  - API Source → Repository → Controller → UI
+- **Reusable UI Components**
+  - Centralized typography, colors & spacing
+  - Custom `AppTextWidget`
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=6085b5&height=120&section=footer" alt="footer"/>
