@@ -59,7 +59,7 @@ class SplashScreen extends GetView<SplashController> {
                     () => AnimatedOpacity(
                   duration: const Duration(milliseconds: 800),
                   opacity: controller.showTagline.value ? 1 : 0,
-                  child: AppTextWidget(text: 'By Keval Patel', type: AppTextType.label, color: Colors.white.withValues(alpha: 0.85),)
+                  child: AppTextWidget(text: 'By Keval Patel', type: AppTextType.label, color: Colors.white.withValues(alpha: 0.84),)
                 ),
               ),
             ],
