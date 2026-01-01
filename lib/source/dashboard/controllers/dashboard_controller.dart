@@ -52,8 +52,12 @@ class DashboardController extends GetxController{
         articles.value = topHeadlinesModel.articles ?? [];
       }
     }
-    catch(e){
+    on DioException catch(e){
+      if(e.response?.statusCode == 429){
+        Get.snackbar("Too Many Requests", "You have made too many requests recently. Developer accounts are limited to 100 requests over a 24 hour period (50 requests available every 12 hours). Please upgrade to a paid plan if you need more requests.");
+      }
       logger.e("asdfghjk::: $e");
+      Get.snackbar("Failed load News", "Please try again after sometime or contact developer");
     }
     finally{
       isLoading.value = false;

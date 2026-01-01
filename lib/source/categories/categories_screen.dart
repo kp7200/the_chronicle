@@ -41,7 +41,7 @@ class CategoriesScreen extends StatelessWidget {
             }
 
             return ListView.separated(
-              controller: controller.scrollController, // 🔥 key part
+              controller: controller.scrollController,
               padding: const EdgeInsets.all(8),
               itemCount: controller.articles.length +
                   (controller.hasMore ? 1 : 0),

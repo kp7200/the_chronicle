@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:the_chronicle/shared/theme/typography/app_text_type.dart';
+import 'package:the_chronicle/shared/theme/typography/app_text_widget.dart';
 import 'splash_controller.dart';
 
 class SplashScreen extends GetView<SplashController> {
@@ -26,23 +28,14 @@ class SplashScreen extends GetView<SplashController> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              /// 📰 App name typing animation
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Obx(
-                        () => Text(
-                      controller.typedText.value,
-                      style: const TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 1.6,
-                        color: Colors.white,
-                      ),
-                    ),
+                        () => AppTextWidget(text: controller.typedText.value, type: AppTextType.headline, color: Colors.white,)
+
                   ),
 
-                  /// ✨ Blinking cursor
                   Obx(
                         () => AnimatedOpacity(
                       opacity: controller.showCursor.value ? 1 : 0,
@@ -62,19 +55,11 @@ class SplashScreen extends GetView<SplashController> {
 
               const SizedBox(height: 16),
 
-              /// 🧠 Tagline fade-in
               Obx(
                     () => AnimatedOpacity(
                   duration: const Duration(milliseconds: 800),
                   opacity: controller.showTagline.value ? 1 : 0,
-                  child: Text(
-                    'Truth, one headline at a time.',
-                    style: TextStyle(
-                      fontSize: 14,
-                      letterSpacing: 1.2,
-                      color: Colors.white.withOpacity(0.85),
-                    ),
-                  ),
+                  child: AppTextWidget(text: 'By Keval Patel', type: AppTextType.label, color: Colors.white.withValues(alpha: 0.85),)
                 ),
               ),
             ],

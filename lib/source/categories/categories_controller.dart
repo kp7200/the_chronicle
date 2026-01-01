@@ -62,7 +62,7 @@ class CategoriesController extends GetxController
     tabController.addListener(() {
       if (!tabController.indexIsChanging) {
         currentCategory = categories[tabController.index];
-        fetchArticles(isInitial: true); // 🔥 API on tab change
+        fetchArticles(isInitial: true);
       }
     });
   }
@@ -75,7 +75,7 @@ class CategoriesController extends GetxController
           scrollController.position.maxScrollExtent - 100 &&
           !isLoading.value &&
           hasMore) {
-        fetchArticles(); // 🔥 pagination call
+        fetchArticles();
       }
     });
   }
@@ -113,15 +113,17 @@ class CategoriesController extends GetxController
       articles.addAll(newArticles);
 
       /*if (newArticles.length < 10) {
-        hasMore = false; // 🔥 stop pagination
+        hasMore = false;
       }*/
-      // Check if we have loaded all available articles
       if (model.totalResults != null &&
           articles.length >= model.totalResults!) {
         hasMore = false;
       }
-    } catch (e) {
-      // keep silent for fresher task
+    } on DioException catch (e) {
+      if(e.response?.statusCode == 429){
+        Get.snackbar("Too Many Requests", "You have made too many requests recently. Developer accounts are limited to 100 requests over a 24 hour period (50 requests available every 12 hours). Please upgrade to a paid plan if you need more requests.");
+      }
+      Get.snackbar("Failed load News", "Please try again after sometime or contact developer");
     } finally {
       isLoading.value = false;
     }

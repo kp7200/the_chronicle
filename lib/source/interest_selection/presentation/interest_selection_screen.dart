@@ -24,7 +24,6 @@ class InterestSelectionScreen extends GetView<InterestSelectionController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            //
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

@@ -3,7 +3,7 @@ import 'dart:convert';
 class TopHeadlinesModel {
   String? status;
   int? totalResults;
-  List<Article> articles; // ✅ NON-nullable
+  List<Article> articles;
 
   TopHeadlinesModel({
     this.status,
