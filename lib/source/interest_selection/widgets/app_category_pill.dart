@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:the_chronicle/shared/theme/app_colors.dart';
-import 'package:the_chronicle/shared/theme/app_gradients.dart';
 import '../../../shared/theme/typography/app_text_type.dart';
 import '../../../shared/theme/typography/app_text_widget.dart';
 
@@ -22,9 +21,9 @@ class AppCategoryPill extends StatelessWidget {
         decoration: BoxDecoration(
             color: isSelected ? AppColors.textRed : Colors.transparent,
             borderRadius: BorderRadiusGeometry.circular(32),
-            border: Border.fromBorderSide(BorderSide(color: isSelected ? AppColors.textRed : AppColors.primary))
+            border: Border.fromBorderSide(BorderSide(color: AppColors.textRed))
         ),
-        child: AppTextWidget(text: title, type: AppTextType.title, color: isSelected ? AppColors.textOnPrimary : AppColors.primary).paddingSymmetric(horizontal: 16, vertical: 8),
+        child: AppTextWidget(text: title, type: AppTextType.title, color: isSelected ? AppColors.textOnPrimary : AppColors.textRed).paddingSymmetric(horizontal: 16, vertical: 8),
       ),
     );
   }

@@ -25,6 +25,8 @@ class CategoriesScreen extends StatelessWidget {
               controller: controller.tabController,
               tabAlignment: TabAlignment.start,
               isScrollable: true,
+              labelColor: AppColors.textRed,
+              indicatorColor: AppColors.textRed,
               tabs: controller.categories
                   .map((c) => Tab(text: c.capitalizeFirst))
                   .toList(),

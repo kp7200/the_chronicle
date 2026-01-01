@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:liquid_glass_renderer/liquid_glass_renderer.dart';
 
+import '../../shared/theme/app_colors.dart';
 import '../categories/categories_screen.dart';
 import '../dashboard/presentations/dashboard_screen.dart';
 import 'main_navigation_controller.dart';
@@ -51,8 +52,7 @@ class MainNavigationScreen extends GetView<MainNavigationController> {
                 type: BottomNavigationBarType.fixed,
                 backgroundColor:
                 Theme.of(context).colorScheme.surface,
-                selectedItemColor:
-                Theme.of(context).colorScheme.primary,
+                selectedItemColor: AppColors.textRed,
                 unselectedItemColor:
                 Theme.of(context).disabledColor,
                 showSelectedLabels: false,

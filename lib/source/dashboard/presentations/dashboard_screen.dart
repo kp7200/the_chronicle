@@ -95,8 +95,8 @@ class DashboardScreen extends GetView<DashboardController> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    AppTextWidget(text: controller.articles[index].author ?? 'No Author', type: AppTextType.caption, color: Theme.of(context).primaryColorDark,),
-                                    AppTextWidget(text: "${controller.articles[index].publishedAt?.formatDate()}", type: AppTextType.caption,),
+                                    AppTextWidget(text: controller.articles[index].author ?? 'No Author', type: AppTextType.caption,),
+                                    AppTextWidget(text: "${controller.articles[index].publishedAt?.formatDate()}", type: AppTextType.caption, color: AppColors.secondary,),
                                   ],
                                 ),
                                 IconButton(onPressed: () => controller.openInBrowser(controller.articles[index].url.toString()), icon: SvgPicture.asset(ImageConstants.externalLinkIcon, height: 22, width: 22, colorFilter: ColorFilter.mode(Theme.of(context).primaryColorDark, BlendMode.srcATop),),),

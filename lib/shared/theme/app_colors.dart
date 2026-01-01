@@ -10,6 +10,8 @@ class AppColors {
   static const Color textSecondary = Color(0xFF586873);
   static const Color textOnPrimary = Color(0xFFFCF7FF);
   static const Color textRed = Color(0xFFB71C1C);
+  static const Color textPrimaryDark = Color(0xFFE5E7EB);
+  static const Color textSecondaryDark = Color(0xFF9CA3AF);
 
   // Surface
   static const Color background = Color(0xFFFCF7FF);

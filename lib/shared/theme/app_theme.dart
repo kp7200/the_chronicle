@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 class AppTheme {
@@ -13,17 +14,14 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     brightness: Brightness.light,
-    fontFamily: 'Poppins',
 
     colorScheme: ColorScheme.light(
       primary: AppColors.primary,
       secondary: AppColors.secondary,
-      // background: AppColors.background,
       surface: AppColors.surface,
       error: AppColors.error,
       onPrimary: AppColors.textOnPrimary,
       onSecondary: AppColors.textOnPrimary,
-      // onBackground: AppColors.textPrimary,
       onSurface: AppColors.textPrimary,
       onError: AppColors.textOnPrimary,
     ),
@@ -38,9 +36,11 @@ class AppTheme {
       centerTitle: false,
     ),
 
-    textTheme: _textTheme(
-      baseColor: AppColors.textPrimary,
-      secondaryColor: AppColors.textSecondary,
+    textTheme: GoogleFonts.poppinsTextTheme(
+        _textTheme(
+            baseColor: AppColors.textPrimary,
+            secondaryColor: AppColors.textSecondary
+        )
     ),
 
     inputDecorationTheme: InputDecorationTheme(
@@ -67,7 +67,6 @@ class AppTheme {
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     brightness: Brightness.dark,
-    fontFamily: 'Poppins',
 
     colorScheme: ColorScheme.dark(
       primary: AppColors.primary,
@@ -91,9 +90,11 @@ class AppTheme {
       foregroundColor: AppColors.textOnPrimary,
     ),
 
-    textTheme: _textTheme(
-      baseColor: AppColors.textOnPrimary,
-      secondaryColor: AppColors.secondary,
+    textTheme: GoogleFonts.poppinsTextTheme(
+        _textTheme(
+            baseColor: AppColors.textPrimaryDark,
+            secondaryColor: AppColors.textSecondaryDark
+        )
     ),
 
     inputDecorationTheme: InputDecorationTheme(

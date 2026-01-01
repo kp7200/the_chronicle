@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'app_text_type.dart';
 
 class AppTextWidget extends StatelessWidget {
@@ -59,7 +60,11 @@ class AppTextWidget extends StatelessWidget {
       case AppTextType.display:
         return textTheme.displaySmall!.copyWith(fontWeight: FontWeight.w700);
       case AppTextType.headline:
-        return textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w600);
+        return GoogleFonts.cinzel(
+          textStyle: textTheme.headlineSmall,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 2,
+        );
       case AppTextType.title:
         return textTheme.titleMedium!;
       case AppTextType.body:

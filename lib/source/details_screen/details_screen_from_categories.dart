@@ -82,8 +82,8 @@ class DetailsScreenFromCategories extends GetView<CategoriesController> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          AppTextWidget(text: "${articles.author}", type: AppTextType.label, color: Theme.of(context).primaryColorDark),
-                          AppTextWidget(text: articles.source?.name ?? '', type: AppTextType.caption, color: AppColors.secondary,),
+                          AppTextWidget(text: articles.author ?? 'No Author', type: AppTextType.label),
+                          AppTextWidget(text: articles.source?.name ?? '', type: AppTextType.caption),
                           AppTextWidget(text: "${articles.publishedAt?.formatDate()}", type: AppTextType.caption, color: AppColors.secondary,)
                         ],
                       ),
