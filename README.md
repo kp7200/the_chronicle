@@ -30,8 +30,6 @@ A modern, scalable **Flutter News Application** powered by **NewsAPI**, built wi
 - **NewsAPI**
 - **GetX** – State management & navigation
 - **Dio** – Network requests
-- **Clean Architecture**
-  - API Source → Repository → Controller → UI
 - **Reusable UI Components**
   - Centralized typography, colors & spacing
   - Custom `AppTextWidget`
